@@ -1,68 +1,142 @@
-body {
-    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+*{ /* The undefined characteristics apply to the entire document*/
+    margin: 0;
+    padding: 10PX;
+    box-sizing: border-box;
+    font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+body { /* */
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);  /* color gradient*/
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+
     align-items: center;
     min-height: 100vh;
 }
 
-section {
+header{ /* centered header*/
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+
+   
+
+}
+
+section { /* main section */
 
     display: flex;
     flex-direction: column;
     backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.8);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    gap: 50px;
+    gap: 30px;
     padding: 3%;
     border-radius: 20px;
     
 
 }
 
-.title {
+.title { /* title within the main section*/
 
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     
 
 
 
 }
 
-h1 {
+h1 { /* text */
 
     font-size:30px;
     font-family: "Anton", sans-serif;
     color:  #4b4dc4 ;
 }
 
-h2 {    
+h2 {    /* second title */
 
     font-size: 20px;
     font-family: "WDXL Lubrifont SC", sans-serif;
     color:#4b4dc4;
+    text-align: center;
 }
 
-.bar {
+.bar { /* input bar container */
       
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
+   
 }
 
-#name {
+#name { /* input bar (name)*/
    
     height: 40px;
     width: 60%;
 }
 
-#age {
+#age { /* input bar (age) */
 
     height: 40px;
-    width: 60%;
+    width: 60%
+   
+}
+
+.validacion { /* validation section */
+
+    display: flex;
+    
+    justify-content: center;
+  
+    padding-bottom: 30px;
+    align-items: center;
+    gap: 30px;
+    
+}
+
+.botones{ /* buttons (validate)(clear) */
+    font-size: 1rem;
+    padding: 10px 20px;
+    width: auto;
+    box-sizing: border-box;
+    max-width: 100%;
+    cursor: pointer;
+}
+
+.img { /* images*/
+    display: none; /* hide the images  */
+    height: 200px;
+    height: 200px;
+}
+
+#images {  /* image container */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.result { /* contenedor de resultados */
+
+    text-align: center;
+}
+
+
+main { 
+
+   flex:1; /* main flex = 1 to fill the page to the bottom */
+}
+
+footer { /* footer, centered text and padding for space */
+    text-align: center;
+    padding: 10px;
 }

@@ -1,39 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Compatibility with older browsers-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Responsive design -->
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./src/css/styless.css">
-    <link rel="stylesheet" href="./src/css/fonst.css">
-</head>
+    <!-- Basic information -->
+    <title>Validador de etiquetas</title>
+    <meta
+      name="description"
+      content="Valida si eres mayor o menor de edad con este divertido formulario interactivo."
+    />
+    <meta name="author" content="David Silva" />
+    <meta
+      name="keywords"
+      content="validador, edad, JavaScript, formulario, validación, programación, divertido"
+    />
 
-<body>
+    <!-- To share on social networks (Open Graph) -->
+    <meta
+      property="og:title"
+      content="Validador de Edad - ¿Eres mayor o menor?"
+    />
+    <meta
+      property="og:description"
+      content="Descubre si eres mayor o menor de edad con este validador interactivo con imágenes y sonidos."
+    />
+    <meta property="og:type" content="website" />
 
-    <section>
+    <!--Styles and fonts-->
+    <link rel="stylesheet" href="./src/css/styless.css" />
+    <link rel="stylesheet" href="./src/css/fonts.css" />
+    <link rel="stylesheet" href="./src/css/fonts2.css" />
+    <link rel="stylesheet" href="./src/css/fonts3.css" />
+  </head>
+  <!-- necessary audios-->
+  <audio src="./src/sounds/CLICKEO.mp3" id="clickeo"></audio>
+  <audio src="./src/sounds/-18.mp3" id="smayor"></audio>
+  <audio src="./src/sounds/18+.mp3" id="smenor"></audio>
+  <audio src="./src/sounds/error-sound.mp3" id="serror"></audio>
+
+  <body>
+    <header>
+      <!-- header and title-->
+      <h1>BIENVENIDO</h1>
+    </header>
+
+    <main>
+      <!-- central part -->
+      <section>
+        <!-- validation section -->
         <div class="title">
-            <h1>VALIDADOR DE EDAD</h1>
+          <!-- validation text -->
+          <h1>VALIDADOR DE EDAD</h1>
 
-            <h2>Ingresa tu información para verificar tu edad</h2>
+          <h2>Ingresa tu información para verificar tu edad</h2>
         </div>
-
-
         <div class="bar">
-            <label for="name">Nombre:</label>
-            <input type="text" id="name" placeholder="Ej: Juan ">
+          <!-- input bars-->
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" placeholder="Ej: Juan " />
 
-            <label for="age">Edad:</label>
-            <input type="text" id="age" placeholder="Ej: 18">
+          <label for="age">Edad:</label>
+          <input type="text" id="age" placeholder="Ej: 18 " />
         </div>
-    </section>
+        <div class="validacion">
+          <!-- buttons to clear and validate -->
+          <button id="button-validar" class="botones" onclick="validar () ">
+            Validar
+          </button>
+          <button id="Button-clear" class="botones" onclick="buttonClear () ">
+            Limpiar
+          </button>
+        </div>
 
+        <div id="result" class="result"></div>
+        <!-- results printing container -->
 
+        <div id="images">
+          <!-- image container -->
+          <img
+            src="./src/img/4.webp"
+            alt="image the flork"
+            id="img1"
+            class="img"
+          />
+          <img
+            src="./src/img/6.webp"
+            alt="image the flork"
+            id="img2"
+            class="img"
+          />
+          <img
+            src="./src/img/5.webp"
+            alt="image the flork"
+            id="img3"
+            class="img"
+          />
+        </div>
+      </section>
+    </main>
 
-
-
-
-
-</body>
-
+    <footer>
+      <!-- footer-->
+      <p>
+        2025 ® Todos los derechos reservados, David Silva . Política de
+        Protección de Datos
+      </p>
+    </footer>
+    <script src="./src/js/main.js"></script>
+    <!-- javascrip linkeo-->
+  </body>
 </html>
